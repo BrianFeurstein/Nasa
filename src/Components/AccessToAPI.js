@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-export default function UsersData() {
-  const [Users, fetchUsers] = useState([]);
+export default function MarsData() {
+  const [Users, fetchData] = useState([]);
 
   const getData = () => {
     fetch(
@@ -10,7 +10,7 @@ export default function UsersData() {
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
-        fetchUsers(res);
+        fetchData(res);
       });
   };
 
