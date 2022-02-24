@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import AccessToAPI from './AccessToAPI';
+import AccessToAPI from './Components/AccessToAPI';
 
 function App() {
   return (

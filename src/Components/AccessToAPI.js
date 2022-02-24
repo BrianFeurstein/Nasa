@@ -1,17 +1,31 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 
-const request = new Request('https://api.nasa.gov/planetary/apod?api_key=DXVHCRnoGnw61YeQVDIIuVr9n0f135yEu6thTH1b');
+export default function UsersData() {
+  const [Users, fetchUsers] = useState([]);
 
-const url = request.url;
-const method = request.method;
-const credentials = request.credentials;
+  const getData = () => {
+    fetch(
+      "https://api.nasa.gov/insight_weather/?api_key=DEMO_KEY&feedtype=json&ver=1.0"
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+        fetchUsers(res);
+      });
+  };
 
-const AccessToAPI = () => {
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
-    <h1>API</h1>
-  )
+    <div>
+      <h2>React Fetch API Example</h2>
+      <ul>
+        <li>
+          
+        </li>
+      </ul>
+    </div>
+  );
 }
-
-export default AccessToAPI
-
-
