@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import AccessToAPI from './Components/AccessToAPI';
+import AccessToApi_weather from './Components/AccessToApi_weather';
 
 function App() {
   return (
     <div className="App">
-      <AccessToAPI/>
+      <AccessToApi_weather/>
     </div>
   );
 }
