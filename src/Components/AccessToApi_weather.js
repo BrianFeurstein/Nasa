@@ -4,7 +4,7 @@ export default function MarsWeatherData() {
   let [solHours, setSolHours] = useState([]);
   const getData = () => {
     fetch(
-      "https://api.nasa.gov/insight_weather/?api_key=DEMO_KEY&feedtype=json&ver=1.0"
+      "https://api.nasa.gov/insight_weather/?api_key=H1yMn7ARi7z1463muFCk6FqTa5gZhWiIdNYBcIMy&feedtype=json&ver=1.0"
     )
       .then((response) => response.json())
       .then(function (data) {
