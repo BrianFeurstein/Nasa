@@ -8,7 +8,7 @@ export default function MarsWeatherData() {
     )
       .then((response) => response.json())
       .then(function (data) {
-        //setSolHours(data.validity_checks[1148].AT.sol_hours_with_data);
+        setSolHours(data.validity_checks[1148].AT.sol_hours_with_data);
        
       });
   };
