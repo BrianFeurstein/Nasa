@@ -1,7 +1,14 @@
-.apodpic{
+
+.APODoverall{
     bottom:100px;
     left: 10px;
     position:absolute;
+}
+.apodpic{
     height:425px;
-    width:425px;
+    width:450px;
+}
+.heading{
+    font-family: 'Press Start 2P', cursive;
+    font-size:18px;
 }

@@ -20,7 +20,8 @@ export default function Get_APOD() {
           }
         
         return (
-                <div>
+                <div className={styles.APODoverall}>
+                    <h1 className={styles.heading}>Picture of the Day</h1>
                     {getOutput()}
                 </div>
             );
