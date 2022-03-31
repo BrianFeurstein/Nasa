@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 
-export default function MarsWeatherData() {
-  let [solHours, setSolHours] = useState([]);
+export default function NewsData() {
+  let [news, setnews] = useState([]);
   const getData = () => {
     fetch(
-      "https://api.nasa.gov/insight_weather/?api_key=H1yMn7ARi7z1463muFCk6FqTa5gZhWiIdNYBcIMy"
+      "https://newsapi.org/v2/everything?q=tesla&from=2022-02-17&sortBy=publishedAt&apiKey=747caea531ef4d0a8f862b050fd573dd"
     )
       .then((response) => response.json())
       .then(function (data) {
-        setSolHours(data.validity_checks[1148].AT.sol_hours_with_data);
+
+        setnews(getData);
        
       });
   };
@@ -27,7 +28,7 @@ export default function MarsWeatherData() {
 
   return (
     <div>
-      <h2>React Fetch API Example</h2>
+      <h2>Daily News in Austria</h2>
       <div id="outputData">
         {getOutput()}
       </div>

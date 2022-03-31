@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './APOD_module.css';
+import styles from './APOD.module.css';
 
 
 export default function Get_APOD() {
@@ -15,7 +15,7 @@ export default function Get_APOD() {
 
         function getOutput() {
             let output = [];
-              output.push(<div><img src={apod_pic1} height="100%" width="45%"></img></div>)
+              output.push(<div ><img className={styles.apodpic} src={apod_pic1} height="100%" width="65%"></img></div>)
             return output;
           }
         
