@@ -1,0 +1,9 @@
+.logo{
+    left:0px;
+    position: fixed;
+}
+.header{
+    height:150px;
+    width:100vw;
+    background-color: grey;
+}
