@@ -7,8 +7,10 @@
 .apodpic{
     height:425px;
     width:450px;
+    margin-top:15px;
 }
 .heading{
     font-family: 'Press Start 2P', cursive;
     font-size:18px;
+    
 }
