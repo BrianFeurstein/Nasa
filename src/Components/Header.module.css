@@ -1,6 +1,7 @@
 .logo{
-    left:0px;
-    position: fixed;
+    left:5px;
+    position: absolute;
+    margin-top: 15px;
 }
 .header{
     height:150px;
