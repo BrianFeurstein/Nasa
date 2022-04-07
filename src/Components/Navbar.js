@@ -10,7 +10,7 @@ class Navbar extends Component {
               <a href="#">Home</a>
               <a href="#">Wetter</a>
               <a href="#">News</a>
-              <a href="#">About</a>
+              <a href="#">About test</a>
               <div className={styles.dot}></div>
             </nav>
          </div>
