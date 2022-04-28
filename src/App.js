@@ -5,6 +5,7 @@ import Creator from './Components/Creator';
 import Header from './Components/Header';
 import Navbar from './Components/Navbar';
 import News from './Components/news.js';
+import Weather from './Components/Weather.js';
 
 function App() {
   const[actualSite,setActualSite] = useState(0);
@@ -17,6 +18,7 @@ function App() {
       return("Wetter");
     }else{
       return(<News/>);
+      
     }
   }
 
@@ -29,11 +31,13 @@ function App() {
       <Header/>
       <Navbar setSite={setSite}/>
       {getContent()}
+      <Weather/>
 
     
       
     </div>
   );
+  
 }
 
 export default App;
