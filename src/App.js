@@ -5,6 +5,7 @@ import Creator from './Components/Creator';
 import Header from './Components/Header';
 import Navbar from './Components/Navbar';
 import News from './Components/news.js';
+import Weather from './Components/Weather.js';
 
 function App() {
   const[actualSite,setActualSite] = useState(0);
@@ -31,9 +32,12 @@ function App() {
       {getContent()}
 
     
+      <Creator/>
+      <Weather/>
       
     </div>
   );
+  
 }
 
 export default App;
