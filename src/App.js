@@ -33,13 +33,7 @@ function App() {
       {getContent()}
       <Weather/>
 
-    
-<<<<<<< HEAD
-      <Creator/>
-      <Weather/>
-=======
->>>>>>> samuel
-      
+
     </div>
   );
   
