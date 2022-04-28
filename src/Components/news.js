@@ -1,37 +1,48 @@
-import React, { useEffect, useState } from "react";
+import React, {
+  useEffect,
+  useState
+} from 'react';
 
-export default function NewsData() {
-  let [news, setnews] = useState([]);
-  const getData = () => {
-    fetch(
-      "https://newsapi.org/v2/everything?q=tesla&from=2022-02-17&sortBy=publishedAt&apiKey=747caea531ef4d0a8f862b050fd573dd"
-    )
-      .then((response) => response.json())
-      .then(function (data) {
+export default function Show_News() {
 
-        setnews(getData);
-       
-      });
-  };
+  let [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getData();
-  }, []);
+   
+      Get_News();
+    
+  }, [loading])
 
-  function getOutput() {
-    let output = [];
-    solHours.forEach(data => {
-      output.push(<div>{data}</div>)
-    });
-    return output;
+  const Get_News = () => {
+    //let url = "https://jsonplaceholder.typicode.com/todos/1";
+    let url =  "https://newsapi.org/v2/everything?q=keyword&apiKey=42de5138331648bd8cb0d8cba013ce85"
+
+    fetch(url)
+      .then((response) => response.json())
+      .then(function (data) {
+        let articles = [];
+        // articles.push({"title":"eins"});
+        // articles.push({"title":"zwei"});
+        // articles.push({"title":"drei"});
+        // articles.push({"title":"vier"});
+        // setArticles(articles);
+        data.articles.forEach(article => {
+        articles.push(article)
+        });
+        setArticles(articles);
+      });
   }
 
-  return (
-    <div>
-      <h2>Daily News in Austria</h2>
-      <div id="outputData">
-        {getOutput()}
-      </div>
-    </div>
-  );
+  const getOutput = ()=> {
+    let output = [];
+    articles.forEach(article => {
+      output.push(<div>{article.title}</div>)
+    });
+    console.log(articles)
+   //output.push(newsshow)
+    return output;
+  }
+return (<h1>{getOutput()}</h1>)
+
 }

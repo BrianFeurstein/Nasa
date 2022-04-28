@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
 import styles from './Navbar.module.css';
+import News from './News.js';
 
-class Navbar extends Component {
-    state = {  } 
-    render() { 
+function Navbar({setSite}) {
+  const onClick = (number) => {
+    setSite(number);
+  }
         return (
         <div>
             <nav className={styles.navMenu}>
-              <a href="#">Home</a>
-              <a href="#">Wetter</a>
-              <a href="#">News</a>
+              <a onClick={()=>{onClick(0)}} href="#">Home</a>
+              <a onClick={()=>{onClick(1)}}href="#">Wetter</a>
+              <a onClick={()=>{onClick(2)}} href="#">News</a>
               <a href="#">About</a>
               <div className={styles.dot}></div>
             </nav>
          </div>
         );
     }
-}
+
  
 export default Navbar;

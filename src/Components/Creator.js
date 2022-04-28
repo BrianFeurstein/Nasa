@@ -16,7 +16,7 @@ function Creator() {
                 </th>
                 <th>
                     <img src={Picture_Samuel} width="50%" height="70%" alt="Samuel"></img>
-                    <p>Samuel Conrad</p>
+                    <p>Samuel Aldrin</p>
                 </th>
                     
                 
