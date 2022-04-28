@@ -27,11 +27,11 @@ export default function Weather() {
 
   function getOutput() {
     return (   
-    
-      <div>
-        <div className={styles.outputWeatherDataTemp}>{weatherDataTemperaturAndPressure.temp}</div>
-        <div className={styles.outputWeatherDataPressure}>{weatherDataTemperaturAndPressure.pressure}</div>
-        <div className={styles.outputWeatherDataSpeed}>{weatherDataSpeed.speed}</div>
+      <div className={styles.outputAllData}>
+        <h2>HEUTE</h2>
+        <p>Temperatur<div className={styles.outputWeatherDataTemp}>{Math.round(weatherDataTemperaturAndPressure.temp-273.15) + " °C"}</div></p>
+        <p>Luftdruck<div className={styles.outputWeatherDataPressure}>{weatherDataTemperaturAndPressure.pressure + " hPa"}</div></p>
+        <p>Windgeschwindigkeit<div className={styles.outputWeatherDataSpeed}>{weatherDataSpeed.speed + " km/h"}</div></p>
       </div>
     );
   }

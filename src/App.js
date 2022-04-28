@@ -18,6 +18,7 @@ function App() {
       return("Wetter");
     }else{
       return(<News/>);
+      
     }
   }
 
@@ -30,10 +31,14 @@ function App() {
       <Header/>
       <Navbar setSite={setSite}/>
       {getContent()}
+      <Weather/>
 
     
+<<<<<<< HEAD
       <Creator/>
       <Weather/>
+=======
+>>>>>>> samuel
       
     </div>
   );
