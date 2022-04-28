@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styles from './Navbar.module.css';
-import News from './News.js';
 
 function Navbar({setSite}) {
   const onClick = (number) => {

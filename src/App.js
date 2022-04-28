@@ -4,7 +4,7 @@ import APOD from './Components/APOD.js';
 import Creator from './Components/Creator';
 import Header from './Components/Header';
 import Navbar from './Components/Navbar';
-import News from './Components/News';
+import News from './Components/news.js';
 
 function App() {
   const[actualSite,setActualSite] = useState(0);
