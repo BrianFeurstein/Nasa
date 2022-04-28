@@ -2,7 +2,7 @@ import './App.css';
 import APOD from './Components/APOD.js';
 import Creator from './Components/Creator';
 import Header from './Components/Header';
-import Navbar from './Components/Navbar';
+import Weather from './Components/Weather.js';
 
 function App() {
   return (
@@ -10,9 +10,11 @@ function App() {
       <APOD/>
       <Header/>
       <Creator/>
-      <Navbar/>
+      <Weather/>
+      
     </div>
   );
+  
 }
 
 export default App;
