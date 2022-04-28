@@ -15,7 +15,7 @@ function App() {
      return (<div><Creator/><APOD/></div>); 
      
     } else if(actualSite==1) {
-      return("Wetter");
+      return(<Weather/>);
     }else{
       return(<News/>);
     }
@@ -30,10 +30,6 @@ function App() {
       <Header/>
       <Navbar setSite={setSite}/>
       {getContent()}
-
-    
-      <Creator/>
-      <Weather/>
       
     </div>
   );
