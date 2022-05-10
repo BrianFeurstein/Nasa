@@ -1,12 +1,13 @@
 
 .APODoverall{
     bottom:100px;
-    left: 10px;
+    left: 50px;
     position:absolute;
 }
 .apodpic{
     height:425px;
     width:450px;
+    margin-top:5px;
 }
 .heading{
     font-family: 'Press Start 2P', cursive;

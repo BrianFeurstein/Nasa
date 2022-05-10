@@ -3,7 +3,7 @@ import React, {
   useState
 } from 'react';
 
-export default function Show_News() {
+export default function Show_News({setSite}) {
 
   let [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -13,6 +13,8 @@ export default function Show_News() {
       Get_News();
     
   }, [loading])
+
+  
 
   const Get_News = () => {
     //let url = "https://jsonplaceholder.typicode.com/todos/1";
@@ -36,13 +38,18 @@ export default function Show_News() {
 
   const getOutput = ()=> {
     let output = [];
+    
     articles.forEach(article => {
-      output.push(<div>{article.title}</div>)
+      output.push(<tr><td><p><a href={article.url}>{article.title}</a></p>{article.description}</td>
+      <td><img src={article.urlToImage} height="100%" width="300vw"></img></td></tr>)
     });
-    console.log(articles)
-   //output.push(newsshow)
+  
+
     return output;
   }
-return (<h1>{getOutput()}</h1>)
-
+return (
+        <div>
+          <h1>Breaking News</h1>
+          <table>{getOutput()}</table>
+        </div>)
 }

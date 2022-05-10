@@ -11,7 +11,7 @@ function Navbar({setSite}) {
               <a onClick={()=>{onClick(0)}} href="#">Home</a>
               <a onClick={()=>{onClick(1)}}href="#">Wetter</a>
               <a onClick={()=>{onClick(2)}} href="#">News</a>
-              <a href="#">About</a>
+              <a onClick={()=>{onClick(3)}} href="#">Distance</a>
               <div className={styles.dot}></div>
             </nav>
          </div>
